@@ -1,0 +1,23 @@
+<div class="chat-room">
+  <div class="chat-room-header">
+    <div class="room-title">○×式場</div>
+  </div>
+    <div class="chat-body">
+    <% @messages.each do |message| %>
+      <% if message.admin == false %>
+        <div class="chat-user">
+          <span class="user-text"><%= message.text %></span>
+       </div>
+        <% else%>
+         <div class="chat-adviser">
+           <span class="adviser-text"><%= message.text %></span>
+         </div>
+      <% end %>
+    <% end %>
+    </div>
+
+
+  <div class="message-form">
+    <%= render partial: 'messages/new', message: @message, room: @room %>
+  </div>
+</div>

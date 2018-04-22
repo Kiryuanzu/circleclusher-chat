@@ -1,10 +1,10 @@
 <div class="chat-room">
   <div class="chat-room-header">
-    <div class="room-title">○×式場</div>
+    <div class="room-title">お話しゲーム</div>
   </div>
     <div class="chat-body">
     <% @messages.each do |message| %>
-      <% if message.admin == false %>
+      <% if message.clusher == false %>
         <div class="chat-user">
           <span class="user-text"><%= message.text %></span>
        </div>
@@ -15,9 +15,3 @@
       <% end %>
     <% end %>
     </div>
-
-
-  <div class="message-form">
-    <%= render partial: 'messages/new', message: @message, room: @room %>
-  </div>
-</div>

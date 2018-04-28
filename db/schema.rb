@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421140212) do
+ActiveRecord::Schema.define(version: 20180428135203) do
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "text"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180421140212) do
     t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "crushpoint", default: 0
     t.index ["token"], name: "index_rooms_on_token"
   end
 

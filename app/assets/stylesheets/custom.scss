@@ -1,0 +1,69 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.welcome {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 250px;
+  color: #ffb6c1;
+}
+
+.chat-room {
+  background-color: #ffc0cb4a;
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.chat-room-header{
+  width: 100%;
+  height: 100px;
+  font-size: 40px;
+  text-align: center;
+  background-color: pink; 
+}
+
+.room-title{
+  padding-top: 20px;
+  color: #a94242;
+}
+
+.chat-body {
+
+}
+.chat-form {
+
+}
+
+.form {
+  text-align: center;
+}
+
+.chat-advise {
+
+}
+
+.user-text {
+  
+  
+}
+
+.adviser-text {
+ 
+  
+}
+
+.chat-user{
+  text-align: right; 
+  color: #c30e46;
+}
+
+.chat-adviser {
+  text-align: left;
+  color: #0079ff;
+}
+.adminform {
+  resize: none;
+  height: 30px;
+  width: 300px;
+}

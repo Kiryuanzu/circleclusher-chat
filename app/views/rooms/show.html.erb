@@ -3,15 +3,17 @@
     <div class="room-title">お話しゲーム</div>
   </div>
     <div class="chat-body">
-    <% @messages.each do |message| %>
-      <% if message.clusher == false %>
-        <div class="chat-user">
-          <span class="user-text"><%= message.text %></span>
-       </div>
-        <% else%>
-         <div class="chat-adviser">
-           <span class="adviser-text"><%= message.text %></span>
+    <% if @messages %>
+      <% @messages.each do |message| %>
+        <% if message.clusher == false %>
+          <div class="chat-user">
+            <span class="user-text"><%= message.text %></span>
          </div>
+          <% else%>
+           <div class="chat-adviser">
+             <span class="adviser-text"><%= message.text %></span>
+           </div>
+        <% end %>
       <% end %>
     <% end %>
     </div>

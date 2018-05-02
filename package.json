@@ -1,5 +1,13 @@
 {
   "name": "circleclusher-chat",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "^3.5.2",
+    "vue": "^2.5.16",
+    "vue-loader": "next",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.3"
+  }
 }

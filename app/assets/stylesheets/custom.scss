@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .welcome {
   font-size: 30px;
@@ -37,7 +39,7 @@
   text-align: center;
 }
 
-.chat-advise {
+.chat-crusher {
 
 }
 
@@ -56,7 +58,7 @@
   color: #c30e46;
 }
 
-.chat-adviser {
+.chat-crusher {
   text-align: left;
   color: #0079ff;
 }

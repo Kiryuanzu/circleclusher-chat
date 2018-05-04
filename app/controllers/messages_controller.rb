@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   def new
+    @message = Message.new
   end   
 
   def create 
@@ -12,8 +13,8 @@ class MessagesController < ApplicationController
     watsonmessage = HTTParty.get("https://watson-api-explorer.mybluemix.net/discovery/api/v1/environments/#{ENV['WATSON_ENVIROMENT_ID']}/collections/#{ENV['WATSON_COLLECTION_ID']}/query?query=%#{message_url_query}&count=10&version=2018-03-05", :headers => headers  )
     if watsonmessage["results"].present?
       watson_text = watsonmessage["results"][0]["A"]
-      Message.create!(text: watson_text, admin: true, room_id: room.id)
-      room.update(room_crushpoint: room.crushpoint + 10 )
+      Message.create!(text: watson_text, clusher: true, room_id: room.id)
+      room.update(crushpoint: room.crushpoint + 10 )
     end
     redirect_to room_path
 
@@ -24,5 +25,4 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:room_id, :text)
   end
-end
 end

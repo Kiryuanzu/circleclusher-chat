@@ -8,10 +8,13 @@
   color: #ffb6c1;
 }
 
+.wrapper {
+  background-color: #ffe0ef;
+}
 .chat-room {
   background-color: #ffc0cb4a;
   width: 600px;
-  height: 100%;
+  height: 800px;
   margin: 0 auto;
 }
 
@@ -36,7 +39,8 @@
 }
 
 .form {
-  text-align: center;
+  margin-right: auto;
+
 }
 
 .chat-crusher {
@@ -44,6 +48,8 @@
 }
 
 .user-text {
+  font-family: 'Century Gothic';
+  font-size: 18px
   
   
 }
@@ -54,8 +60,15 @@
 }
 
 .chat-user{
-  text-align: right; 
-  color: #c30e46;
+  margin-left: auto;
+  width: calc(100% - 400px);
+  height: 100%;
+  background: white;
+  position: relative;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  background-color: #effff7;
 }
 
 .chat-crusher {
@@ -66,4 +79,52 @@
   resize: none;
   height: 30px;
   width: 300px;
+}
+
+#talkbubble-user {
+   width: 200px;
+   height: 100%;
+   background: white;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}
+#talkbubble-user:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+}
+
+#talkbubble-crush {
+   width: 300px;
+   height: 100%;
+   background: white;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+   font-size: 18px;
+}
+#talkbubble-crush:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid white;
+   border-bottom: 13px solid transparent;
+}
+
+.chat-delete {
+  margin-left: auto;
+
 }

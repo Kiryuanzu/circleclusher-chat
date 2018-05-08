@@ -20,9 +20,19 @@ class MessagesController < ApplicationController
 
   end
 
+  def destroy
+    room = Room.find_by(token: session[:room_token])
+    room.update(crushpoint: 0)
+    @messages = room.messages
+    @messages.destroy_all   
+    redirect_to room_path
+  end
+
   private
 
   def message_params
     params.require(:message).permit(:room_id, :text)
   end
+
 end
+

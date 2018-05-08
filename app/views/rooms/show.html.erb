@@ -1,24 +1,31 @@
+<div class="wrapper">
 <div class="chat-room">
   <div class="chat-room-header">
-    <div class="room-title">お話しゲーム</div>
+    <div class="room-title">桜あい</div>
   </div>
     <div class="chat-body">
       <% if @messages %>
         <% @messages.each do |message| %>
           <% if message.clusher == false %>
-            <div class="chat-user">
+            <div class = "chat-user">
               <span class="user-text"><%= message.text %></span>
             </div>
           <% else %>
-            <div class="chat-crusher">
+            <div id = "talkbubble-crush">
               <span class="crusher-text"><%= message.text %></span>
             </div>
           <% end %>
         <% end %> 
       <% end %>
     </div>
-
+  <% if @room.crushpoint < 15 %>
   <div class="message-form">
     <%= render partial: 'messages/new', message: @message, room: @room %>
   </div>
+  <% else %>
+  クラッシュされてしまいました。
+  <% end %>
+
+  <%= link_to 'やり直す（チャット履歴を全て削除）', message_path(@messages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+</div>
 </div>

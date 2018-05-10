@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
     @message = Message.new
     if @room
       @messages = @room.messages
+      @usermessages = @messages.where(clusher: false)
     else
       token = SecureRandom.uuid
       @room = Room.create( token: token)

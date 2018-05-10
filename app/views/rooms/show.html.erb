@@ -1,7 +1,7 @@
 <div class="wrapper">
 <div class="chat-room">
   <div class="chat-room-header">
-    <div class="room-title">桜あい</div>
+    <div class="room-title">佐倉 あい</div>
   </div>
     <div class="chat-body">
       <% if @messages %>
@@ -11,21 +11,34 @@
               <span class="user-text"><%= message.text %></span>
             </div>
           <% else %>
+          <div class ="message-flex">
+          <% if @room.crushpoint < 50 %>
+            <%= image_tag ("crusher.png"), :class => "crusher-image" %>
+          <% else %>
+            <%= image_tag ("crush-over.png"), :class => "crusher-image" %>
+          <% end %>
+            <div class ="crush-div">
             <div id = "talkbubble-crush">
               <span class="crusher-text"><%= message.text %></span>
             </div>
+          </div>
+          </div>
           <% end %>
         <% end %> 
       <% end %>
     </div>
-  <% if @room.crushpoint < 15 %>
+  <% if @room.crushpoint < 50 %>
   <div class="message-form">
     <%= render partial: 'messages/new', message: @message, room: @room %>
   </div>
   <% else %>
-  クラッシュされてしまいました。
+  <div class= "block-message">
+    <span class="block-message-text"> ブロックされてしまいました…<span><span class="block-message-text">(結果をTwitterで知らせる)<span>
+    <a href="http://twitter.com/share?url=https://crusher-chat.herokuapp.com&amp;text=<%= @usermessages.size %>回の発言でブロックされてしまいました。最後の発言は「<%= @usermessages.last.text %>」でした。&amp;related=kiryuanzu&amp;hashtags=crushchat" id="tweet" class="block-message-text" target="_blank" name="tweet">(結果をTwitterで知らせる)</a>
+  </div>
   <% end %>
-
-  <%= link_to 'やり直す（チャット履歴を全て削除）', message_path(@messages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+    <% if @messages = @room.messages %>
+    <%= link_to 'やり直す（チャット履歴を全て削除）', message_path(@messages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+    <% end %>
 </div>
 </div>

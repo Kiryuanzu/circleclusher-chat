@@ -9,12 +9,13 @@
 }
 
 .wrapper {
-  background-color: #ffe0ef;
+  background-color: pink;
+  background-image: image-url("backcolor.jpg")
 }
 .chat-room {
-  background-color: #ffc0cb4a;
+  background-color: #ffcfcf;
   width: 600px;
-  height: 800px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -23,7 +24,9 @@
   height: 100px;
   font-size: 40px;
   text-align: center;
-  background-color: pink; 
+  border-style: solid;
+  border-color: #ffa8b7;
+  border-radius: 10px
 }
 
 .room-title{
@@ -32,6 +35,7 @@
 }
 
 .chat-body {
+  margin-bottom: 30px;
 
 }
 .chat-form {
@@ -47,6 +51,9 @@
 
 }
 
+.crusher-text {
+  word-wrap: break-word;
+}
 .user-text {
   font-family: 'Century Gothic';
   font-size: 18px
@@ -111,20 +118,55 @@
    -webkit-border-radius: 10px;
    border-radius:         10px;
    font-size: 18px;
+   top: 12px;
+   word-wrap: break-word
 }
 #talkbubble-crush:before {
    content:"";
    position: absolute;
    right: 100%;
-   top: 26px;
+   top: 20px;
    width: 0;
    height: 0;
-   border-top: 13px solid transparent;
-   border-right: 26px solid white;
-   border-bottom: 13px solid transparent;
+   border-top: 10px solid transparent;
+   border-right: 20px solid white;
+   border-bottom: 10px solid transparent;
 }
 
 .chat-delete {
-  margin-left: auto;
+  margin-left: 330px;
 
+}
+
+textarea{
+  resize: none;
+  border: solid 1px;
+  border-radius: 10px
+}
+
+.message-button {
+  margin-bottom: 30px;
+}
+.crush-div {
+  margin-left: 20px;
+
+}
+.crusher-image {
+  width: 64px;
+  height: 64px;
+}
+
+.message-flex {
+  display: flex;
+  margin-top: 10px;
+}
+
+.block-message {
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: white;
+}
+.block-message-text {
+  font-size: 20px;
+  color: red;
 }

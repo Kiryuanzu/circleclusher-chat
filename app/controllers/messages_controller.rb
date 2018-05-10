@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
       Message.create!(text: watson_text, clusher: true, room_id: room.id)
       room.update(crushpoint: room.crushpoint + 10 )
     end
-    if room.crushpoint > 15 
+    if room.crushpoint > 50 
       Message.create!(text: "ごめんなさい、もう分かってると思うけど、あなたの気持ちは受け取れません。ブロックさせてください…。", clusher: true, room_id: room.id)
     end
     redirect_to room_path

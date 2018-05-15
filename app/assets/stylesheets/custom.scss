@@ -4,13 +4,15 @@
 .welcome {
   font-size: 30px;
   text-align: center;
-  padding-top: 250px;
+  padding-top: 200px;
   color: #ffb6c1;
 }
 
 .wrapper {
   background-color: pink;
-  background-image: image-url("backcolor.jpg")
+  background-image: image-url("backcolor.jpg");
+  height: 1200px;
+  width: 100%;
 }
 .chat-room {
   background-color: #ffcfcf;
@@ -169,4 +171,19 @@ textarea{
 .block-message-text {
   font-size: 20px;
   color: red;
+}
+
+.title-text {
+  font-size: 50px;
+  color: black;
+}
+.title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.title-image {
+
+}
+.homeback {
+  text-align: right;
 }

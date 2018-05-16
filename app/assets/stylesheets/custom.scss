@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background-color: #efd6d669;
+}
 .welcome {
   font-size: 30px;
   text-align: center;
@@ -49,9 +52,6 @@
 
 }
 
-.chat-crusher {
-
-}
 
 .crusher-text {
   word-wrap: break-word;
@@ -63,10 +63,6 @@
   
 }
 
-.adviser-text {
- 
-  
-}
 
 .chat-user{
   margin-left: auto;
@@ -163,6 +159,12 @@ textarea{
   margin-top: 10px;
 }
 
+.title-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .block-message {
   border: solid 1px;
   border-radius: 10px;
@@ -174,16 +176,31 @@ textarea{
 }
 
 .title-text {
-  font-size: 50px;
+  font-size: 70px;
   color: black;
+  padding-bottom: 30px;
 }
 .title {
   text-align: center;
   padding-bottom: 30px;
 }
 .title-image {
-
+  width: 256px;
+  height: 256px;
 }
+
 .homeback {
   text-align: right;
 }
+.crusher-in {
+  display: inline-block;
+}
+
+.kakoi-in {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.title-wrapper {
+  margin-top: 30px;
+}
+

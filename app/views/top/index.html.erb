@@ -1,8 +1,28 @@
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Crush Chat</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">遊び方</a></li>
+        </ul>
+</header>
+<body>
+<div class="title-wrapper">
 <div class="title"> 
   <span class="title-text">Crash Chat</span>
 </div>
-<div class="welcome">
-  <%= image_tag ("crusher.png"), :class => "title-image" %>
-  <span class="start"><%= link_to 'はじめる', room_path %></span>
+<div class="title-flex">
+  <div class="image">
+  <div class="crasher-in">
+    <%= image_tag ("crusher.png"), :class => "title-image" %>
+    <p class="start"><%= link_to '囲いになる', room_path %></p>
+  </div>
+  <div class="kakoi-in">
+    <%= image_tag ("kakoi.png"), :class => "title-image" %>
+    <p class="start"><%= link_to '姫になる', room_path %></p>
+  </div>
+  </div>
 </div>
-
+</div>
+</body>

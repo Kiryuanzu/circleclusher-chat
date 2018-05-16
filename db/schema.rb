@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180428135203) do
+ActiveRecord::Schema.define(version: 20180516154542) do
+
+  create_table "kakoi_messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "text"
+    t.boolean "kakoi", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "kakoi_room_id"
+    t.index ["kakoi_room_id"], name: "index_kakoi_messages_on_kakoi_room_id"
+  end
+
+  create_table "kakoi_rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "token"
+    t.integer "kakoipoint", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_kakoi_rooms_on_token"
+  end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "text"
@@ -29,5 +46,6 @@ ActiveRecord::Schema.define(version: 20180428135203) do
     t.index ["token"], name: "index_rooms_on_token"
   end
 
+  add_foreign_key "kakoi_messages", "kakoi_rooms"
   add_foreign_key "messages", "rooms"
 end

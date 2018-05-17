@@ -52,3 +52,6 @@ production:
   database: circleclusher-chat_production
   username: circleclusher-chat
   password: <%= ENV['CIRCLECLUSHER-CHAT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -1,0 +1,47 @@
+<div class="wrapper">
+<div class="chat-room">
+  <div class="chat-room-header">
+    <div class="room-title">加古井 </div>
+  </div>
+    <div class="chat-body">
+      <% if @kakoimessages %>
+        <% @kakoimessages.each do |message| %>
+          <% if message.clusher == false %>
+            <div class = "chat-user">
+              <span class="user-text"><%= message.text %></span>
+            </div>
+          <% else %>
+          <div class ="message-flex">
+          <% if @kakoiroom.crushpoint < 50 %>
+            <%= image_tag ("kakoi.png"), :class => "crusher-image" %>
+          <% else %>
+            <%= image_tag ("kakoi-over.png"), :class => "crusher-image" %>
+          <% end %>
+            <div class ="crush-div">
+            <div id = "talkbubble-crush">
+              <span class="crusher-text"><%= message.text %></span>
+            </div>
+          </div>
+          </div>
+          <% end %>
+        <% end %> 
+      <% end %>
+    </div>
+  <% if @kakoiroom.kakoipoint < 50 %>
+  <div class="message-form">
+    <%= render partial: 'kakoi_messages/new', kakoi_message: @kakoimessage, kakoi_room: @kakoiroom %>
+  </div>
+  <% else %>
+  <div class= "block-message">
+    <span class="block-message-text"> つい驚いて、ブロックしてしまいました…<span><span class="block-message-text">(結果をTwitterで知らせる)<span>
+    <a href="http://twitter.com/share?url=https://cra sher-chat.herokuapp.com&amp;text=<%= @usermessages.size %>回の発言でブロックしてしまいました。最後の発言は「<%= @usermessages.last.text %>」でした。&amp;related=kiryuanzu&amp;hashtags=crushchat" id="tweet" class="block-message-text" target="_blank" name="tweet">(結果をTwitterで知らせる)</a>
+  </div>
+  <% end %>
+    <% if @kakoimessages == @kakoiroom.kakoi_messages %>
+    <%= link_to 'やり直す（チャット履歴を全て削除）', kakoi_message_path(@kakoimessages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+    <% end %>
+    <div class="homeback">
+      <%= link_to 'タイトルに戻る', root_path %>
+    </div>
+</div>
+</div>

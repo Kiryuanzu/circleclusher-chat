@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class KakoimessagesControllerTest < ActionDispatch::IntegrationTest
+class KakoiMessagesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

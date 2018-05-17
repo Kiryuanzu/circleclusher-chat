@@ -1,2 +1,0 @@
-class KakoimessagesController < ApplicationController
-end

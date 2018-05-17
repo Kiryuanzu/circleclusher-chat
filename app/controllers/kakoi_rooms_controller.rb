@@ -1,13 +1,13 @@
 class KakoiRoomsController < ApplicationController
   def show
     @kakoiroom = KakoiRoom.find_by(token: session[:kakoi_room_token])
-    @message = Message.new
+    @kakoimessage = KakoiMessage.new
     if @room
-      @messages = @kakoiroom.messages
-      @usermessages = @messages.where(kakoi: false)
+      @kakoimessages = @kakoiroom.kakoi_messages
+      @usermessages = @kakoimessages.where(kakoi: false)
     else
       token = SecureRandom.uuid
-      @room = KakoiRoom.create( token: token)
+      @kakoiroom = KakoiRoom.create( token: token)
       session[:kakoi_room_token] = token
       @messages = []
     end

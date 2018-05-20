@@ -6,13 +6,13 @@
     <div class="chat-body">
       <% if @kakoimessages %>
         <% @kakoimessages.each do |message| %>
-          <% if message.clusher == false %>
+          <% if message.kakoi == false %>
             <div class = "chat-user">
               <span class="user-text"><%= message.text %></span>
             </div>
           <% else %>
           <div class ="message-flex">
-          <% if @kakoiroom.crushpoint < 50 %>
+          <% if @kakoiroom.kakoipoint < 50 %>
             <%= image_tag ("kakoi.png"), :class => "crusher-image" %>
           <% else %>
             <%= image_tag ("kakoi-over.png"), :class => "crusher-image" %>

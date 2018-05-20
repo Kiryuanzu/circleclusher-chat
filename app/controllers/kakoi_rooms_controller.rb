@@ -2,7 +2,7 @@ class KakoiRoomsController < ApplicationController
   def show
     @kakoiroom = KakoiRoom.find_by(token: session[:kakoi_room_token])
     @kakoimessage = KakoiMessage.new
-    if @room
+    if @kakoiroom
       @kakoimessages = @kakoiroom.kakoi_messages
       @usermessages = @kakoimessages.where(kakoi: false)
     else

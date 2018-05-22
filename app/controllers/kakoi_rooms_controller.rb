@@ -9,7 +9,7 @@ class KakoiRoomsController < ApplicationController
       token = SecureRandom.uuid
       @kakoiroom = KakoiRoom.create( token: token)
       session[:kakoi_room_token] = token
-      @messages = []
+      @kakoimessages = @kakoiroom.kakoi_messages
     end
   end
 end

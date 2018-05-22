@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
       token = SecureRandom.uuid
       @room = Room.create( token: token)
       session[:room_token] = token
-      @messages = []
+      @messages = @room.messages
     end
   end
 end

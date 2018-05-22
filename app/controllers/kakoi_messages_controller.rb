@@ -25,7 +25,7 @@ class KakoiMessagesController < ApplicationController
   def destroy
     room = KakoiRoom.find_by(token: session[:kakoi_room_token])
     room.update(kakoipoint: 0)
-    @messages = room.messages
+    @messages = room.kakoi_messages
     @messages.destroy_all   
     redirect_to kakoi_room_path
   end

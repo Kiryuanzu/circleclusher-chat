@@ -3,7 +3,7 @@ class KakoiRoomsController < ApplicationController
     @kakoiroom = KakoiRoom.find_by(token: session[:kakoi_room_token])
     @kakoimessage = KakoiMessage.new
     if @kakoiroom
-      @kakoimessages = @kakoiroom.kakoi_messages
+      @kakoimessages = @kakoiroom.kakoi_messages.order("created_at ASC")
       @usermessages = @kakoimessages.where(kakoi: false)
     else
       token = SecureRandom.uuid

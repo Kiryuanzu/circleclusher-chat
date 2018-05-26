@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
     @room = Room.find_by(token: session[:room_token])
     @message = Message.new
     if @room
-      @messages = @room.messages
+      @messages = @room.messages.order("created_at ASC")
       @usermessages = @messages.where(clusher: false)
     else
       token = SecureRandom.uuid

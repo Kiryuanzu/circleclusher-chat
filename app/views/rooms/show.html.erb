@@ -34,7 +34,7 @@
   <% else %>
   <div class= "block-message">
     <span class="block-message-text"> ブロックされてしまいました…<span><span class="block-message-text"><span>
-    <a href="http://twitter.com/share?url=https://crasher-chat.herokuapp.com&amp;text=<%= @usermessages.size %>回の発言でブロックされてしまいました。最後の発言は「<%= @usermessages.last.text %>」でした。&amp;related=kiryuanzu&amp;hashtags=crushchat" id="tweet" class="block-message-text" target="_blank" name="tweet">(結果をTwitterで知らせる)</a>
+    <a href="http://twitter.com/share?url=https://crasher-chat.herokuapp.com&amp;text=<%= @usermessages.size %>回の発言でブロックされてしまいました。最後の発言は「<%= @usermessages.last.text %>」でした。&amp;related=kiryuanzu&amp;hashtags=crashchat" id="tweet" class="block-message-text" target="_blank" name="tweet">(結果をTwitterで知らせる)</a>
   </div>
   <% end %>
     <% if @messages %>

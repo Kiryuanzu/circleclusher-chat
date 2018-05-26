@@ -15,11 +15,11 @@
 <div class="title-flex">
   <div class="image">
   <div class="crasher-in">
-    <%= image_tag ("crusher.png"), :class => "title-image" %>
+    <%= link_to image_tag("crusher.png", {:class => "title-image"}), room_path %>
     <p class="crasher-start-text"><%= link_to '姫と話す', room_path %></p>
   </div>
   <div class="kakoi-in">
-    <%= image_tag ("kakoi.png"), :class => "title-image" %>
+    <%= link_to image_tag("kakoi.png", {:class => "title-image"}), kakoi_room_path %>
     <p class="kakoi-start-text"><%= link_to '囲いと話す', kakoi_room_path %></p>
   </div>
   </div>

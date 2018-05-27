@@ -37,9 +37,9 @@
     <a href="http://twitter.com/share?url=https://crasher-chat.herokuapp.com&amp;text=<%= @usermessages.size %>回の発言でブロックしてしまいました。最後の発言は「<%= @usermessages.last.text %>」でした。&amp;related=kiryuanzu&amp;hashtags=crashchat" id="tweet" class="block-message-text" target="_blank" name="tweet">(結果をTwitterで知らせる)</a>
   </div>
   <% end %>
-    <% if @kakoimessages == @kakoiroom.kakoi_messages %>
+   <% if @kakoimessages %>
     <%= link_to 'やり直す（チャット履歴を全て削除）', kakoi_message_path(@kakoimessages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
-    <% end %>
+   <% end %>
     <div class="homeback">
       <%= link_to 'タイトルに戻る', root_path %>
     </div>

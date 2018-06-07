@@ -166,6 +166,13 @@ textarea{
   margin-top: 100px;
 }
 
+.about-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .block-message {
   border: solid 1px;
   border-radius: 10px;
@@ -227,4 +234,42 @@ textarea{
   font-size: 30px;
   }
 }
+.discription {
+  width: 700px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.discription-row {
+  margin-top: 30px;
+  font-size: 20px;
+}
 
+.about {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 60px;
+  border-bottom: double 3px #e61612;
+  color: #ec6085;
+}
+
+.about-title {
+  font-size: 33px;
+  color: #0000008a;
+
+}
+.about-detail {
+  font-size: 20px;
+  color: #250006c9;
+}
+.detail-point {
+  color: #fb3434cc;
+}
+
+.aboutimage-box {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.about-image {
+  height: 500px;
+  width: 400px;
+}

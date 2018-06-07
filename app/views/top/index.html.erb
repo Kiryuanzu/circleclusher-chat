@@ -2,27 +2,25 @@
   <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand">Crush Chat(β版)</a>
+            <a class="navbar-brand">Crush Chat</a>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">遊び方</a></li>
         </ul>
 </header>
 <body>
-<div class="title-wrapper">
-<div class="title"> 
-  <span class="title-text">Crash Chat(β版)</span>
-</div>
-<div class="title-flex">
-  <div class="image">
-  <div class="crasher-in">
-    <%= link_to image_tag("crusher.png", {:class => "title-image"}), room_path %>
-    <p class="crasher-start-text"><%= link_to '姫と話す', room_path %></p>
+  <div class="title-wrapper">
+    <div class="title"> 
+      <span class="title-text">Crash Chat</span>
+    </div>
+    <div class="title-flex">
+      <div class="crasher-in">
+        <%= link_to image_tag("crusher.png", {:class => "title-image"}), room_path %>
+        <p class="crasher-start-text"><%= link_to '姫と話す', room_path %></p>
+      </div>
+      <div class="kakoi-in">
+        <%= link_to image_tag("kakoi.png", {:class => "title-image"}), kakoi_room_path %>
+        <p class="kakoi-start-text"><%= link_to '囲いと話す', kakoi_room_path %></p>
+      </div>
+    </div>
   </div>
-  <div class="kakoi-in">
-    <%= link_to image_tag("kakoi.png", {:class => "title-image"}), kakoi_room_path %>
-    <p class="kakoi-start-text"><%= link_to '囲いと話す', kakoi_room_path %></p>
-  </div>
-  </div>
-</div>
-</div>
 </body>

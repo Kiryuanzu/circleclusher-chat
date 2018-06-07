@@ -163,6 +163,7 @@ textarea{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 .block-message {
@@ -177,12 +178,16 @@ textarea{
 
 .title-text {
   font-size: 70px;
-  color: black;
-  padding-bottom: 30px;
+  color: #ec6085;
+  padding-top: 30px;
+  border-bottom: double 3px #e61612;
+  font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
+  @media screen and (min-width: 640px) {
+  font-size: 120px;
+  }
 }
 .title {
   text-align: center;
-  padding-bottom: 30px;
 
 }
 .title-image {
@@ -194,12 +199,11 @@ textarea{
   text-align: right;
 }
 .crusher-in {
-  display: inline-block;
+
 }
 
 .kakoi-in {
-  display: inline-block;
-  margin-bottom: 30px;
+  margin-left: 100px;
 }
 .title-wrapper {
   margin-top: 30px;
@@ -207,9 +211,20 @@ textarea{
 
 .crasher-start-text {
   font-size: 20px;
-  color: pink;  
+  color: pink; 
+  text-align: center; 
+  font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
+  @media screen and (mix-width: 640px) {
+  font-size: 20px;
+  }
 }
 .kakoi-start-text {
   font-size: 20px;
   color: pink;
+  text-align: center; 
+  font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
+  @media screen and (min-width: 640px) {
+  font-size: 20px;
+  }
 }
+

@@ -207,15 +207,11 @@ textarea{
   width: 256px;
   height: 256px;
   border: 3px solid #150c0c;
-<<<<<<< HEAD
   @media screen and (max-width: 640px) {
   width: 128px;
   height: 128px;
   }
-=======
->>>>>>> 26ca34d9d3b778d1a1df206f76a8329f9e7ef463
 }
-
 .homeback {
   text-align: right;
 }
@@ -303,5 +299,5 @@ textarea{
     box-shadow:2px 2px #e46e6e;
     margin: auto;
     margin-top: 30px;
-    a:visited {color:#ffffff;}
+    a:visited {color: #ffffff} 
 }

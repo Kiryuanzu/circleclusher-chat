@@ -14,14 +14,17 @@ body {
 .wrapper {
   background-color: pink;
   background-image: image-url("backcolor.jpg");
-  height: 1200px;
+  height: 800px;
   width: 100%;
 }
 .chat-room {
   background-color: #ffcfcf;
-  width: 600px;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
+  @media screen and (min-width: 640px) {
+  width: 800px;
+  }
 }
 
 .chat-room-header{
@@ -164,6 +167,9 @@ textarea{
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  @media screen and (max-width: 640px) {
+  margin-top: 80px;
+  }
 }
 
 .about-flex {
@@ -189,8 +195,8 @@ textarea{
   padding-top: 30px;
   border-bottom: double 3px #e61612;
   font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
-  @media screen and (min-width: 640px) {
-  font-size: 120px;
+  @media screen and (max-width: 640px) {
+  font-size: 50px;
   }
 }
 .title {
@@ -201,6 +207,10 @@ textarea{
   width: 256px;
   height: 256px;
   border: 3px solid #150c0c;
+  @media screen and (max-width: 640px) {
+  width: 128px;
+  height: 128px;
+  }
 }
 
 .homeback {
@@ -212,6 +222,9 @@ textarea{
 
 .kakoi-in {
   margin-left: 100px;
+  @media screen and (max-width: 640px) {
+  margin-left: 70px;
+  }
 }
 .title-wrapper {
   margin-top: 30px;
@@ -236,8 +249,9 @@ textarea{
   }
 }
 .discription {
-  width: 700px;
+  width: 50%;
   margin-top: 50px;
+  margin-left: 30px;
 }
 
 .about {
@@ -262,8 +276,9 @@ textarea{
 }
 
 .aboutimage-box {
-  margin-left: 90px;
-  margin-top: 15px;
+  width: 50%;
+  margin-left: 130px;
+  margin-top: 100px;
 }
 
 .about-image {
@@ -284,6 +299,6 @@ textarea{
     border-radius:5px;
     box-shadow:2px 2px #e46e6e;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 30px;
     a:visited {color:#ffffff;} 
 }

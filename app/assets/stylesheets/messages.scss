@@ -1,3 +1,162 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.chat-room {
+  background-color: #e2f0f7;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  @media screen and (max-width: 640px) {
+  width: 100%;
+  height: 100%;
+  }
+}
+
+.wrapper {
+  background-color: pink;
+  background-image: image-url("backcolor.jpg");
+  height: 700px;
+  width: 100%;
+}
+
+
+.chat-room-header{
+  width: 100%;
+  text-align: center;
+}
+
+.room-title{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  background-color: #1062a9;
+  font-size:40px;
+  @media screen and (max-width: 640px) {
+  font-size: 30px;
+  }
+}
+
+.chat-body {
+  margin-bottom: 30px;
+
+}
+
+
+
+.crusher-text {
+  word-wrap: break-word;
+  @media screen and (max-width: 640px) {
+  font-size: 15px;
+  }
+}
+.user-text {
+  font-family: 'Century Gothic';
+  font-size: 18px;
+  @media screen and (max-width: 640px) {
+  font-size: 15px;
+  }
+}
+
+
+.chat-user{
+  margin-left: auto;
+  width: calc(100% - 400px);
+  height: 100%;
+  background: white;
+  position: relative;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  background-color: #effff7;
+  @media screen and (max-width: 640px) {
+  width: calc(100% - 200px);
+  }
+}
+
+.chat-crusher {
+  text-align: left;
+  color: #0079ff;
+}
+
+#talkbubble-user {
+   width: 200px;
+   height: 100%;
+   background: white;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}
+#talkbubble-user:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+}
+
+#talkbubble-crush {
+   width: 300px;
+   height: 100%;
+   background: white;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+   font-size: 18px;
+   top: 12px;
+   word-wrap: break-word;
+   @media screen and (max-width: 640px) {
+   top: -5px;
+   width: 150px;
+  }
+}
+#talkbubble-crush:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 20px;
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-right: 20px solid white;
+   border-bottom: 10px solid transparent;
+  @media screen and (max-width: 640px) {
+   top: 7.5px;
+  }
+}
+
+.chat-delete {
+  margin-left: 330px;
+  @media screen and (max-width: 640px) {
+  margin-left: 0px;
+  }
+}
+
+.message-button {
+  margin-bottom: 30px;
+  @media screen and (max-width: 640px) {
+  margin-bottom: 10px;
+  }
+}
+.crush-div {
+  margin-left: 20px;
+
+}
+.crusher-image {
+  width: 64px;
+  height: 64px;
+  @media screen and (max-width: 640px) {
+  width: 32px;
+  height: 32px;
+  }
+}
+
+.message-flex {
+  display: flex;
+  margin-top: 10px;
+}

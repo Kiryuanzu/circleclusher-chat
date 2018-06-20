@@ -1,3 +1,68 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.discription {
+  width: 100%;
+  margin: auto 0;
+}
+
+.about {
+  font-size: 60px;
+  border-bottom: double 3px #e61612;
+  color: #ec6085;
+  @media screen and (max-width: 640px) {
+  text-align: center;
+  }
+}
+
+.about-title {
+    font-size: 22px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: dashed 1px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+.about-title-box {
+  @media screen and (max-width: 640px) {
+    text-align: center;
+  }
+  }
+
+.about-detail {
+  font-size: 25px;
+  color: #232121;
+  @media screen and (max-width: 640px) {
+  font-size: 20px;
+  }
+}
+.detail-point {
+  color: #fb3434cc;
+}
+
+.aboutimage-box {
+ text-align: center;
+}
+
+.title-back {
+  text-align: center;
+}
+.about-image {
+  height: 500px;
+  width: 400px;
+}
+
+.titleback-button {
+  font-size: 25px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: dashed 1px #67c5ff;
+  background: #f2fcff;
+  border-radius: 3px;
+  transition: .4s;
+}
+.titleback-button:hover {
+    background: #cbedff;
+    color: #FFF;
+}

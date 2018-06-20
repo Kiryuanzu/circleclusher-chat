@@ -29,7 +29,7 @@ textarea{
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
   margin-top: 80px;
   }
 }
@@ -57,7 +57,7 @@ textarea{
   padding-top: 30px;
   border-bottom: double 3px #e61612;
   font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
   font-size: 50px;
   }
 }
@@ -69,7 +69,7 @@ textarea{
   width: 256px;
   height: 256px;
   border: 3px solid #150c0c;
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
   width: 128px;
   height: 128px;
   }
@@ -80,8 +80,8 @@ textarea{
 
 .kakoi-in {
   margin-left: 100px;
-  @media screen and (min-width: 640px) {
-  margin-left: 70px;
+  @media screen and (max-width: 640px) {
+  margin-left: 50px;
   }
 }
 .title-wrapper {
@@ -93,8 +93,8 @@ textarea{
   color: pink; 
   text-align: center; 
   font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
-  @media screen and (min-width: 640px) {
-  font-size: 30px;
+  @media screen and (max-width: 640px) {
+  font-size: 20px;
   }
 }
 .kakoi-start-text {
@@ -102,8 +102,8 @@ textarea{
   color: pink;
   text-align: center; 
   font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
-  @media screen and (min-width: 640px) {
-  font-size: 30px;
+  @media screen and (max-width: 640px) {
+  font-size: 20px;
   }
 }
 .discription {

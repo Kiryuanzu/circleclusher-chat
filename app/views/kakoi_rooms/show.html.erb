@@ -4,6 +4,14 @@
     <div class="room-title">加古井 </div>
   </div>
     <div class="chat-body">
+      <div class ="crasher-message-flex">
+          <%= kakoiimage(@kakoiroom) %>
+            <div class ="crush-div">
+              <div id = "talkbubble-crush">
+                <span class="crusher-text">初めまして。加古井です。</span>
+              </div>
+            </div>
+      </div>
       <% if @kakoimessages %>
         <% @kakoimessages.each do |message| %>
           <% if message.kakoi == false %>
@@ -11,12 +19,8 @@
               <span class="user-text"><%= message.text %></span>
             </div>
           <% else %>
-          <div class ="message-flex">
-          <% if @kakoiroom.kakoipoint < 50 %>
-            <%= image_tag ("kakoi.png"), :class => "crusher-image" %>
-          <% else %>
-            <%= image_tag ("kakoi-over.png"), :class => "crusher-image" %>
-          <% end %>
+          <div class ="crasher-message-flex">
+          <%= kakoiimage(@kakoiroom) %>
             <div class ="crush-div">
             <div id = "talkbubble-crush">
               <span class="crusher-text"><%= message.text %></span>
@@ -38,10 +42,14 @@
   </div>
   <% end %>
    <% if @kakoimessages %>
-    <%= link_to 'やり直す（チャット履歴を全て削除）', kakoi_message_path(@kakoimessages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+    <div class="chat-delete">
+      <%= link_to 'やり直す（チャット履歴を全て削除）', kakoi_message_path(@kakoimessages), :method => :delete, :class =>"btn btn-danger chat-delete-button"%>
+    </div>
    <% end %>
     <div class="homeback">
-      <%= link_to 'タイトルに戻る', root_path %>
+      <div class="homeback-button">
+        <%= link_to 'タイトルに戻る', root_path %>
+      </div>
     </div>
-</div>
+  </div>
 </div>

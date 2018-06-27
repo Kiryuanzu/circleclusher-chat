@@ -10,7 +10,7 @@ textarea{
   border: solid 1px;
   border-radius: 10px;
   @media screen and (max-width: 640px) {
-  width: 95%;
+  width: 80%;
   height: 2.5em;
   }
 
@@ -63,15 +63,6 @@ textarea{
 
 }
 
-.block-message {
-  border: solid 1px;
-  border-radius: 10px;
-  background-color: white;
-}
-.block-message-text {
-  font-size: 20px;
-  color: red;
-}
 
 .title-text {
   font-size: 70px;
@@ -96,8 +87,21 @@ textarea{
   height: 128px;
   }
 }
+
 .homeback {
-  text-align: right;
+  margin-top: 15px;
+  text-align: center;
+}
+.homeback-button {
+  font-size: 15px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: dashed 1px #67c5ff;
+  background: #f2fcff;
+  border-radius: 3px;
+  transition: .4s;
 }
 
 .kakoi-in {

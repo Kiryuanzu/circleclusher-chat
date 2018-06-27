@@ -1,9 +1,17 @@
 <div class="wrapper">
-<div class="chat-room">
-  <div class="chat-room-header">
-    <div class="room-title">佐倉 あい</div>
-  </div>
+  <div class="chat-room">
+    <div class="chat-room-header">
+      <div class="room-title">佐倉 あい</div>
+    </div>
     <div class="chat-body">
+      <div class ="crasher-message-flex">
+          <%= crasherimage(@room) %>
+            <div class ="crush-div">
+              <div id = "talkbubble-crush">
+                <span class="crusher-text">初めまして！佐倉あいだよ！</span>
+              </div>
+            </div>
+      </div>
       <% if @messages %>
         <% @messages.each do |message| %>
           <% if message.clusher == false %>
@@ -11,22 +19,17 @@
               <span class="user-text"><%= message.text %></span>
             </div>
           <% else %>
-          <div class ="message-flex">
-          <% if @room.crushpoint < 50 %>
-            <%= image_tag ("crusher.png"), :class => "crusher-image" %>
-          <% else %>
-            <%= image_tag ("crush-over.png"), :class => "crusher-image" %>
-          <% end %>
+          <div class ="crasher-message-flex">
+          <%= crasherimage(@room) %>
             <div class ="crush-div">
-            <div id = "talkbubble-crush">
-              <span class="crusher-text"><%= message.text %></span>
+              <div id = "talkbubble-crush">
+                <span class="crusher-text"><%= message.text %></span>
+              </div>
             </div>
-          </div>
           </div>
           <% end %>
         <% end %> 
-      <% end %>
-    </div>
+      <% end %>    
   <% if @room.crushpoint < 50 %>
   <div class="message-form">
     <%= render partial: 'messages/new', message: @message, room: @room %>
@@ -38,10 +41,15 @@
   </div>
   <% end %>
     <% if @messages %>
-    <%= link_to 'やり直す（チャット履歴を全て削除）', message_path(@messages), :method => :delete, :class =>"btn btn-danger chat-delete"%>
+      <div class="chat-delete">
+        <%= link_to 'やり直す（チャット履歴を全て削除）', message_path(@messages), :method => :delete, :class =>"btn btn-danger chat-delete-button"%>
+      </div>
     <% end %>
     <div class="homeback">
+      <div class="homeback-button">
       <%= link_to 'タイトルに戻る', root_path %>
+      </div>
     </div>
-</div>
+    </div>
+  </div>
 </div>

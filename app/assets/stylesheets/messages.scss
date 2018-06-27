@@ -13,7 +13,6 @@
 }
 
 .wrapper {
-  background-color: pink;
   background-image: image-url("backcolor.jpg");
   height: 700px;
   width: 100%;
@@ -38,7 +37,7 @@
 
 .chat-body {
   margin-bottom: 30px;
-
+  background-color: #e2f0f7;
 }
 
 
@@ -131,16 +130,18 @@
 }
 
 .chat-delete {
-  margin-left: auto;
+  text-align: right;
+}
+.chat-delete-button {
   @media screen and (max-width: 640px) {
-  margin-left: 0px;
+  font-size: 13px;
   }
 }
 
 .message-button {
   margin-bottom: 30px;
   @media screen and (max-width: 640px) {
-  margin-bottom: 10px;
+  font-size: 14px;
   }
 }
 .crush-div {
@@ -156,7 +157,26 @@
   }
 }
 
-.message-flex {
+.crasher-message-flex {
   display: flex;
   margin-top: 10px;
+}
+
+.message-form {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.block-message {
+  margin-top: 30px;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: white;
+}
+.block-message-text {
+  font-size: 20px;
+  color: red;
+  @media screen and (max-width: 640px) {
+  font-size: 14px;
+  }
 }

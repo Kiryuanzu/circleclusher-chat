@@ -2,6 +2,6 @@
   <%= form_for(@message) do |f| %>
     <%= f.text_area :text, cols:"60", placeholder:"何でも気軽に話しかけてね！", rows:"3", required: true, maxlength:"60" %>
     <%= f.hidden_field :room_id, value: @room.id %>
-    <%= f.submit "メッセージを投稿", :class =>"btn btn-primary message-button" %>
+    <%= f.submit "送信", :class =>"btn btn-primary message-button" %>
   <% end %>
 </div>

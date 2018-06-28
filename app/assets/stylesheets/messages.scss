@@ -1,7 +1,6 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "mixin";
 .chat-room {
   background-color: #e2f0f7;
   width: 60%;
@@ -15,8 +14,11 @@
 
 .wrapper {
   background-image: image-url("backcolor.jpg");
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
+  @media screen and (max-width: 640px) {
+  height: 100vh;
+  }
 }
 
 
@@ -62,7 +64,7 @@
 
 
 .chat-user{
-  width: fit-content;
+  max-width: 40%;
   height: 100%;
   background: white;
   position: relative;
@@ -70,12 +72,13 @@
   -webkit-border-radius: 10px;
   border-radius:         10px;
   background-color: #effff7;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   margin-right: 33px;
   padding: 5px;
 
   &:before {
+   width: fit-content;
    content:"";
    position: absolute;
    left: 100%;
@@ -141,6 +144,7 @@
 }
 .crush-div {
   margin-left: 20px;
+  margin-top: 5px;
 
 }
 .crusher-image {

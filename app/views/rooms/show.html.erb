@@ -15,8 +15,10 @@
       <% if @messages %>
         <% @messages.each do |message| %>
           <% if message.clusher == false %>
-            <div class = "chat-user">
-              <span class="user-text"><%= message.text %></span>
+            <div class="user-message-flex">
+              <div class = "chat-user">
+                <span class="user-text"><%= message.text %></span>
+              </div>
             </div>
           <% else %>
           <div class ="crasher-message-flex">

@@ -4,19 +4,22 @@
     <div class="room-title">加古井 </div>
   </div>
     <div class="chat-body">
-      <div class ="crasher-message-flex">
+      <div class="chat-body-message">
+        <div class ="crasher-message-flex">
           <%= kakoiimage(@kakoiroom) %>
             <div class ="crush-div">
               <div id = "talkbubble-crush">
                 <span class="crusher-text">初めまして。加古井です。</span>
               </div>
             </div>
-      </div>
+        </div>
       <% if @kakoimessages %>
         <% @kakoimessages.each do |message| %>
           <% if message.kakoi == false %>
-            <div class = "chat-user">
-              <span class="user-text"><%= message.text %></span>
+            <div class="user-message-flex">
+              <div class = "chat-user">
+                <span class="user-text"><%= message.text %></span>
+              </div>
             </div>
           <% else %>
           <div class ="crasher-message-flex">
@@ -30,6 +33,7 @@
           <% end %>
         <% end %> 
       <% end %>
+      </div>
     </div>
   <% if @kakoiroom.kakoipoint < 50 %>
   <div class="message-form">
